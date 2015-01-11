@@ -1,0 +1,19 @@
+{
+  "name": "Transit-Stop-Collector",
+  "version": "1.0.0",
+  "description": "A process for collecting transit data and maintaining a simplified database of stops with latitude/longitude.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/projectweekend/Transit-Stop-Collector.git"
+  },
+  "author": "Brian Hines",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/projectweekend/Transit-Stop-Collector/issues"
+  },
+  "homepage": "https://github.com/projectweekend/Transit-Stop-Collector"
+}
