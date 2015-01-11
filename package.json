@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/projectweekend/Transit-Stop-Collector/issues"
   },
-  "homepage": "https://github.com/projectweekend/Transit-Stop-Collector"
+  "homepage": "https://github.com/projectweekend/Transit-Stop-Collector",
+  "dependencies": {
+    "mongoose": "^3.8.21"
+  }
 }
