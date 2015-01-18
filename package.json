@@ -1,6 +1,6 @@
 {
   "name": "transit-stop-collector",
-  "version": "1.0.8",
+  "version": "2.0.1",
   "description": "A process for collecting transit data and maintaining a simplified database of stops with latitude/longitude.",
   "main": "./lib/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "fast-csv": "^0.5.4",
+    "lodash": "^2.4.1",
     "mongoose": "^3.8.21"
   }
 }
