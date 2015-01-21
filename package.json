@@ -1,6 +1,6 @@
 {
   "name": "transit-stop-collector",
-  "version": "2.0.2",
+  "version": "2.0.5",
   "description": "A process for collecting transit data and maintaining a simplified database of stops with latitude/longitude.",
   "main": "./lib/index.js",
   "scripts": {
