@@ -24,3 +24,6 @@ stop_times:
         - trip_id
         - stop_id
         - stop_sequence
+sql:
+    routes_query: chicago_cta_query_routes.sql
+    stops_query: chicago_cta_query_stops.sql
