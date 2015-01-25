@@ -1,4 +1,6 @@
+import sys
 import csv
+import yaml
 
 
 def strip_columns(row, columns_to_keep):
@@ -22,17 +24,43 @@ def process_gtfs_file(input_file, output_file, columns_to_keep):
 
 
 def main():
-	routes_columns = ['route_id', 'route_short_name', 'route_long_name', 'route_type']
-	stops_columns = ['stop_id', 'stop_name', 'stop_lat', 'stop_lon']
-	trips_columns = ['trip_id', 'route_id']
-	stop_times_columns = ['trip_id', 'arrival_time', 'departure_time', 'stop_id', 'stop_sequence']
+	try:
+		config_file = './config/{0}.yml'.format(sys.argv[1:][0])
+	except IndexError:
+		sys.exit("Job name is a required argument. Example: chicago_cta")
 
-	to_process = (
-		('./gtfs/in/routes.txt', './gtfs/out/routes.txt', routes_columns,),
-		('./gtfs/in/stops.txt', './gtfs/out/stops.txt', stops_columns,),
-		('./gtfs/in/trips.txt', './gtfs/out/trips.txt', trips_columns,),
-		('./gtfs/in/stop_times.txt', './gtfs/out/stop_times.txt', stop_times_columns,),
-	)
+	try:
+		with open(config_file, 'r') as file:
+			config = yaml.safe_load(file)
+	except IOError:
+		sys.exit("Missing config file for job: '{0}'".format(config_file))
+
+
+	try:
+		to_process = (
+			(
+				'./gtfs/in/{0}'.format(config['routes']['file']),
+				'./gtfs/out/{0}'.format(config['routes']['file']),
+				config['routes']['columns'],
+			),
+			(
+				'./gtfs/in/{0}'.format(config['stops']['file']),
+				'./gtfs/out/{0}'.format(config['stops']['file']),
+				config['stops']['columns'],
+			),
+			(
+				'./gtfs/in/{0}'.format(config['trips']['file']),
+				'./gtfs/out/{0}'.format(config['trips']['file']),
+				config['trips']['columns'],
+			),
+			(
+				'./gtfs/in/{0}'.format(config['stop_times']['file']),
+				'./gtfs/out/{0}'.format(config['stop_times']['file']),
+				config['stop_times']['columns'],
+			),
+		)
+	except KeyError:
+		sys.exit("Config file '{0}' is not formatted properly".format(config_file))
 
 	for item in to_process:
 		process_gtfs_file(item[0], item[1], item[2])
