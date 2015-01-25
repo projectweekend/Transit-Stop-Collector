@@ -1,4 +1,5 @@
-CREATE TABLE IF NOT EXISTS stops (
+-- Chicago CTA:
+CREATE TABLE IF NOT EXISTS chicago_cta_stops (
     stop_id             char(50),
     stop_name           char(100),
     stop_lat            NUMERIC(14, 11),
@@ -7,7 +8,7 @@ CREATE TABLE IF NOT EXISTS stops (
 );
 
 
-CREATE TABLE IF NOT EXISTS routes (
+CREATE TABLE IF NOT EXISTS chicago_cta_routes (
     route_id            char(50),
     route_short_name    char(100),
     route_long_name     char(250),
@@ -16,20 +17,18 @@ CREATE TABLE IF NOT EXISTS routes (
 );
 
 
-CREATE TABLE IF NOT EXISTS trips (
+CREATE TABLE IF NOT EXISTS chicago_cta_trips (
     trip_id             char(50),
     route_id            char(50),
     CONSTRAINT          trip_id_pk PRIMARY KEY(trip_id),
-    FOREIGN KEY         (route_id) REFERENCES routes (route_id)
+    FOREIGN KEY         (route_id) REFERENCES chicago_cta_routes (route_id)
 );
 
 
-CREATE TABLE IF NOT EXISTS stop_times (
+CREATE TABLE IF NOT EXISTS chicago_cta_stop_times (
     trip_id             char(50),
-    arrival_time        time,
-    departure_time      time,
     stop_id             char(50),
     stop_sequence       integer,
-    FOREIGN KEY         (trip_id) REFERENCES trips (trip_id),
-    FOREIGN KEY         (stop_id) REFERENCES stops (stop_id)
+    FOREIGN KEY         (trip_id) REFERENCES chicago_cta_trips (trip_id),
+    FOREIGN KEY         (stop_id) REFERENCES chicago_cta_stops (stop_id)
 );
