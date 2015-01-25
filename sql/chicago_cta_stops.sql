@@ -1,9 +1,9 @@
 SELECT          'chicago-cta' as system,
-                s.stop_name as name,
+                trim(s.stop_name) as name,
                 s.stop_lat as latitude,
                 s.stop_lon as longitude,
-                r.route_id as route_id,
-                r.route_long_name as route_name,
+                trim(r.route_id) as route_id,
+                trim(r.route_long_name) as route_name,
                 'train' as route_type,
                 'n/a' as route_direction
 FROM            chicago_cta_routes as r
@@ -22,13 +22,13 @@ GROUP BY        s.stop_name,
 UNION
 
 SELECT          'chicago-cta' as system,
-                s.stop_name as name,
+                trim(s.stop_name) as name,
                 s.stop_lat as latitude,
                 s.stop_lon as longitude,
-                r.route_id as route_id,
-                r.route_long_name as route_name,
+                trim(r.route_id) as route_id,
+                trim(r.route_long_name) as route_name,
                 'bus' as route_type,
-                t.direction as route_direction
+                trim(lower(t.direction)) as route_direction
 FROM            chicago_cta_routes as r
 JOIN            chicago_cta_trips as t
                 ON t.route_id = r.route_id
