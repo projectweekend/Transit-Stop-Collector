@@ -1,0 +1,25 @@
+routes:
+    file: chicago_cta_routes.txt
+    columns:
+        - route_id
+        - route_short_name
+        - route_long_name
+        - route_type
+stops:
+    file: chicago_cta_stops.txt
+    columns:
+        - stop_id
+        - stop_name
+        - stop_lat
+        - stop_lon
+trips:
+    file: chicago_cta_trips.txt
+    columns:
+        - trip_id
+        - route_id
+stop_times:
+    file: chicago_cta_stop_times.txt
+    columns:
+        - trip_id
+        - stop_id
+        - stop_sequence
