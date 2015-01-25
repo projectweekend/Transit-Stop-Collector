@@ -5,7 +5,7 @@ SELECT          'chicago-cta' as system,
                 r.route_id as route_id,
                 r.route_long_name as route_name,
                 'train' as route_type,
-                'N/A' as route_direction
+                'n/a' as route_direction
 FROM            chicago_cta_routes as r
 JOIN            chicago_cta_trips as t
                 ON t.route_id = r.route_id
