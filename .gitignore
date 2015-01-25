@@ -58,7 +58,5 @@ target/
 *.sublime-workspace
 
 #GTFS files
-gtfs/routes.txt
-gtfs/stop_times.txt
-gtfs/stops.txt
-gtfs/trips.txt
+gtfs/in/
+gtfs/out/
