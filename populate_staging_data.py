@@ -1,4 +1,5 @@
 import os
+import sys
 import psycopg2
 from urlparse import urlparse
 
@@ -25,18 +26,22 @@ def connect_to_database():
 	return connection, connection.cursor()
 
 
-def import_query(template, csv_path):
+def import_query(template, csv_path, file_prefix):
 	with open(template, 'r') as file:
 		data = file.read()
-	return data.format(csv_path)
+	return data.format(csv_path, file_prefix)
 
 
 def main():
+	try:
+		file_prefix = sys.argv[1:][0]
+	except IndexError:
+		sys.exit("File and table name prefix is a required argument. Example: chicago_cta")
+
 	gtfs_dir = '{0}/gtfs/out'.format(os.getcwd())
-	query = import_query('./tpl/import_from_csv.tpl', gtfs_dir)
+	query = import_query('./tpl/import_from_csv.tpl', gtfs_dir, file_prefix)
 
 	conn, cursor = connect_to_database()
-
 	cursor.execute(query)
 	conn.commit()
 
