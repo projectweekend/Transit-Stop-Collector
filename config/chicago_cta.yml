@@ -17,6 +17,7 @@ trips:
     columns:
         - trip_id
         - route_id
+        - direction
 stop_times:
     file: chicago_cta_stop_times.txt
     columns:
