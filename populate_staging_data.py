@@ -36,7 +36,7 @@ def main():
 	try:
 		file_prefix = sys.argv[1:][0]
 	except IndexError:
-		sys.exit("File and table name prefix is a required argument. Example: chicago_cta")
+		sys.exit("Job name is a required argument. Example: chicago_cta")
 
 	gtfs_dir = '{0}/gtfs/out'.format(os.getcwd())
 	query = import_query('./tpl/import_from_csv.tpl', gtfs_dir, file_prefix)
