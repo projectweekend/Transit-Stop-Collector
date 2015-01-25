@@ -52,6 +52,13 @@ docs/_build/
 
 # PyBuilder
 target/
+
 # Sublime Stuff
 *.sublime-project
 *.sublime-workspace
+
+#GTFS files
+gtfs/routes.txt
+gtfs/stop_times.txt
+gtfs/stops.txt
+gtfs/trips.txt
