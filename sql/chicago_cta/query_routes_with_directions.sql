@@ -1,4 +1,5 @@
-SELECT          r.route_id as id,
+SELECT          'chicago-cta' as system,
+                r.route_id as id,
                 r.route_long_name as name,
                 'train' as type,
                 'N/A' as directions
@@ -10,7 +11,8 @@ GROUP BY        r.route_id
 
 UNION
 
-SELECT          r.route_id as id,
+SELECT          'chicago-cta' as system,
+                r.route_id as id,
                 r.route_long_name as name,
                 'bus' as type,
                 string_agg(DISTINCT t.direction, ', ') as directions
