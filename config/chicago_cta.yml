@@ -1,3 +1,6 @@
+system:
+    name: Chicago Transit Authority
+    code: chicago-cta
 routes:
     file: chicago_cta_routes.txt
     columns:
