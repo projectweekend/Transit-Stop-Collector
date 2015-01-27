@@ -1,4 +1,3 @@
--- Chicago CTA:
 CREATE TABLE IF NOT EXISTS chicago_cta_stops (
     stop_id             char(50),
     stop_name           char(100),
