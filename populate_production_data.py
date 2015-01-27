@@ -15,6 +15,17 @@ mongo_conn = connect_to_mongo()
 
 db = mongo_conn[DATABASE_NAME]
 
+try:
+	config_file = './config/{0}.yml'.format(sys.argv[1:][0])
+except IndexError:
+	sys.exit("Job name is a required argument. Example: chicago_cta")
+
+try:
+	with open(config_file, 'r') as file:
+		CONFIG = yaml.safe_load(file)
+except IOError:
+	sys.exit("Missing config file for job: '{0}'".format(config_file))
+
 
 def load_query_from_file(file):
 	with open('./sql/{0}'.format(file), 'r') as f:
@@ -22,11 +33,25 @@ def load_query_from_file(file):
 	return query
 
 
-def populate_routes(routes_query):
-	query = load_query_from_file(routes_query)
+def populate_systems():
+	print('Populating transit_systems...')
+	db.transit_systems.remove({
+		'system': CONFIG['system']['code']
+	})
+	db.transit_systems.insert({
+		'system': CONFIG['system']['code'],
+		'name': CONFIG['system']['name']
+	})
+
+
+def populate_routes():
+	print('Populating transit_routes...')
+	query = load_query_from_file(CONFIG['sql']['routes_query'])
 	psql_cursor.execute(query)
 
-	db.transit_routes.remove()
+	db.transit_routes.remove({
+		'system': CONFIG['system']['code']
+	})
 	db.transit_routes.insert(({
 		'system': r[0],
 		'id': r[1],
@@ -36,11 +61,14 @@ def populate_routes(routes_query):
 	} for r in psql_cursor))
 
 
-def populate_stops(stops_query):
-	query = load_query_from_file(stops_query)
+def populate_stops():
+	print('Populating transit_stops...')
+	query = load_query_from_file(CONFIG['sql']['stops_query'])
 	psql_cursor.execute(query)
 
-	db.transit_stops.remove()
+	db.transit_stops.remove({
+		'system': CONFIG['system']['code']
+	})
 	db.transit_stops.insert(({
 		'system': r[0],
 		'name': r[1],
@@ -54,19 +82,9 @@ def populate_stops(stops_query):
 
 
 def main():
-	try:
-		config_file = './config/{0}.yml'.format(sys.argv[1:][0])
-	except IndexError:
-		sys.exit("Job name is a required argument. Example: chicago_cta")
-
-	try:
-		with open(config_file, 'r') as file:
-			config = yaml.safe_load(file)
-	except IOError:
-		sys.exit("Missing config file for job: '{0}'".format(config_file))
-
-	populate_routes(config['sql']['routes_query'])
-	populate_stops(config['sql']['stops_query'])
+	populate_systems()
+	populate_routes()
+	populate_stops()
 
 
 if __name__ == '__main__':
