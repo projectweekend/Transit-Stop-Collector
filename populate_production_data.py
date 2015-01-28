@@ -33,6 +33,38 @@ def load_query_from_file(file):
 	return query
 
 
+def route_documents(cursor):
+	for r in cursor:
+		document = {
+			'system': r[0],
+			'id': r[1],
+			'name': r[2],
+			'type': r[3],
+			'directions': [d.strip() for d in r[4].split(',')],
+			'urls': {
+				'all_stops': '/{0}/{1}/{2}'.format(r[0], r[3], r[1])
+			}
+		}
+		for d in document['directions']:
+			document['urls']['{0}_stops'.format(d)] = '/{0}/{1}/{2}/{3}'.format(r[0], r[3], r[1], d)
+		yield document
+
+
+def stop_documents(cursor):
+	for r in cursor:
+		document = {
+			'system': r[0],
+			'name': r[1],
+			'latitude': float(r[2]),
+			'longitude': float(r[3]),
+			'route_id': r[4],
+			'route_name': r[5],
+			'route_type': r[6],
+			'route_direction': r[7]
+		}
+		yield document
+
+
 def populate_systems():
 	print('Populating transit_systems...')
 	db.transit_systems.remove({
@@ -40,7 +72,10 @@ def populate_systems():
 	})
 	db.transit_systems.insert({
 		'system': CONFIG['system']['code'],
-		'name': CONFIG['system']['name']
+		'name': CONFIG['system']['name'],
+		'urls': {
+			'routes': '/{0}'.format(CONFIG['system']['code'])
+		}
 	})
 
 
@@ -52,13 +87,7 @@ def populate_routes():
 	db.transit_routes.remove({
 		'system': CONFIG['system']['code']
 	})
-	db.transit_routes.insert(({
-		'system': r[0],
-		'id': r[1],
-		'name': r[2],
-		'type': r[3],
-		'directions': r[4].split()
-	} for r in psql_cursor))
+	db.transit_routes.insert(route_documents(psql_cursor))
 
 
 def populate_stops():
@@ -69,16 +98,7 @@ def populate_stops():
 	db.transit_stops.remove({
 		'system': CONFIG['system']['code']
 	})
-	db.transit_stops.insert(({
-		'system': r[0],
-		'name': r[1],
-		'latitude': float(r[2]),
-		'longitude': float(r[3]),
-		'route_id': r[4],
-		'route_name': r[5],
-		'route_type': r[6],
-		'route_direction': r[7]
-	} for r in psql_cursor))
+	db.transit_stops.insert(stop_documents(psql_cursor))
 
 
 def main():
