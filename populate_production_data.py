@@ -1,4 +1,3 @@
-import os
 import sys
 
 from utils.psql_utils import connect_to_psql
@@ -6,14 +5,8 @@ from utils.mongo_utils import connect_to_mongo
 from utils.config_utils import job_config
 
 
-DATABASE_NAME = os.getenv('DATABASE_NAME', None)
-assert(DATABASE_NAME)
-
-
 psql_conn, psql_cursor = connect_to_psql()
-mongo_conn = connect_to_mongo()
-
-db = mongo_conn[DATABASE_NAME]
+mongo_db = connect_to_mongo()
 
 
 def load_query_from_file(file):
@@ -56,10 +49,10 @@ def stop_documents(cursor):
 
 def populate_systems(config):
 	print('Populating transit_systems...')
-	db.transit_systems.remove({
+	mongo_db.transit_systems.remove({
 		'system': config['system']['code']
 	})
-	db.transit_systems.insert({
+	mongo_db.transit_systems.insert({
 		'system': config['system']['code'],
 		'name': config['system']['name'],
 		'urls': {
@@ -73,10 +66,10 @@ def populate_routes(config):
 	query = load_query_from_file(config['sql']['routes_query'])
 	psql_cursor.execute(query)
 
-	db.transit_routes.remove({
+	mongo_db.transit_routes.remove({
 		'system': config['system']['code']
 	})
-	db.transit_routes.insert(route_documents(psql_cursor))
+	mongo_db.transit_routes.insert(route_documents(psql_cursor))
 
 
 def populate_stops(config):
@@ -84,10 +77,10 @@ def populate_stops(config):
 	query = load_query_from_file(config['sql']['stops_query'])
 	psql_cursor.execute(query)
 
-	db.transit_stops.remove({
+	mongo_db.transit_stops.remove({
 		'system': config['system']['code']
 	})
-	db.transit_stops.insert(stop_documents(psql_cursor))
+	mongo_db.transit_stops.insert(stop_documents(psql_cursor))
 
 
 def main():
