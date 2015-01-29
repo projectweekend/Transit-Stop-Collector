@@ -2,7 +2,7 @@ SELECT          'chicago-cta' as system,
                 trim(lower(r.route_id)) as id,
                 trim(r.route_long_name) as name,
                 'train' as type,
-                'n/a' as directions
+                '' as directions
 FROM            chicago_cta_routes as r
 JOIN            chicago_cta_trips as t
                 ON r.route_id = t.route_id
