@@ -2,11 +2,15 @@ import sys
 
 from utils.psql_utils import connect_to_psql
 from utils.mongo_utils import connect_to_mongo
-from utils.config_utils import job_config
+from utils.config_utils import main_config, job_config
 
 
-psql_conn, psql_cursor = connect_to_psql()
-mongo_db = connect_to_mongo()
+MAIN_CONFIG, MAIN_CONFIG_FILE = main_config(sys.argv[1:])
+JOB_CONFIG, JOB_CONFIG_FILE = job_config(sys.argv[1:])
+
+
+psql_conn, psql_cursor = connect_to_psql(MAIN_CONFIG['database_url'])
+mongo_db = connect_to_mongo(MAIN_CONFIG['mongo_url'])
 
 
 def load_query_from_file(file):
@@ -84,11 +88,9 @@ def populate_stops(config):
 
 
 def main():
-	config, _ = job_config(sys.argv[1:])
-
-	populate_systems(config)
-	populate_routes(config)
-	populate_stops(config)
+	populate_systems(JOB_CONFIG)
+	populate_routes(JOB_CONFIG)
+	populate_stops(JOB_CONFIG)
 
 
 if __name__ == '__main__':
