@@ -4,6 +4,7 @@ import yaml
 
 from utils.psql_utils import connect_to_psql
 from utils.mongo_utils import connect_to_mongo
+from utils.config_utils import job_config
 
 
 DATABASE_NAME = os.getenv('DATABASE_NAME', None)
@@ -14,17 +15,6 @@ psql_conn, psql_cursor = connect_to_psql()
 mongo_conn = connect_to_mongo()
 
 db = mongo_conn[DATABASE_NAME]
-
-try:
-	config_file = './config/{0}.yml'.format(sys.argv[1:][0])
-except IndexError:
-	sys.exit("Job name is a required argument. Example: chicago_cta")
-
-try:
-	with open(config_file, 'r') as file:
-		CONFIG = yaml.safe_load(file)
-except IOError:
-	sys.exit("Missing config file for job: '{0}'".format(config_file))
 
 
 def load_query_from_file(file):
@@ -65,46 +55,48 @@ def stop_documents(cursor):
 		yield document
 
 
-def populate_systems():
+def populate_systems(config):
 	print('Populating transit_systems...')
 	db.transit_systems.remove({
-		'system': CONFIG['system']['code']
+		'system': config['system']['code']
 	})
 	db.transit_systems.insert({
-		'system': CONFIG['system']['code'],
-		'name': CONFIG['system']['name'],
+		'system': config['system']['code'],
+		'name': config['system']['name'],
 		'urls': {
-			'routes': '/{0}'.format(CONFIG['system']['code'])
+			'routes': '/{0}'.format(config['system']['code'])
 		}
 	})
 
 
-def populate_routes():
+def populate_routes(config):
 	print('Populating transit_routes...')
-	query = load_query_from_file(CONFIG['sql']['routes_query'])
+	query = load_query_from_file(config['sql']['routes_query'])
 	psql_cursor.execute(query)
 
 	db.transit_routes.remove({
-		'system': CONFIG['system']['code']
+		'system': config['system']['code']
 	})
 	db.transit_routes.insert(route_documents(psql_cursor))
 
 
-def populate_stops():
+def populate_stops(config):
 	print('Populating transit_stops...')
-	query = load_query_from_file(CONFIG['sql']['stops_query'])
+	query = load_query_from_file(config['sql']['stops_query'])
 	psql_cursor.execute(query)
 
 	db.transit_stops.remove({
-		'system': CONFIG['system']['code']
+		'system': config['system']['code']
 	})
 	db.transit_stops.insert(stop_documents(psql_cursor))
 
 
 def main():
-	populate_systems()
-	populate_routes()
-	populate_stops()
+	config, _ = job_config(sys.argv[1:])
+
+	populate_systems(config)
+	populate_routes(config)
+	# populate_stops(config)
 
 
 if __name__ == '__main__':
