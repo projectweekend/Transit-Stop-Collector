@@ -60,3 +60,6 @@ target/
 #GTFS files
 gtfs/in/
 gtfs/out/
+
+# Main config file
+config/.main.yml
