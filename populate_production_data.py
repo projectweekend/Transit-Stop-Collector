@@ -1,6 +1,5 @@
 import os
 import sys
-import yaml
 
 from utils.psql_utils import connect_to_psql
 from utils.mongo_utils import connect_to_mongo
@@ -96,7 +95,7 @@ def main():
 
 	populate_systems(config)
 	populate_routes(config)
-	# populate_stops(config)
+	populate_stops(config)
 
 
 if __name__ == '__main__':
