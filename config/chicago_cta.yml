@@ -1,32 +1,34 @@
+feed_url: http://www.transitchicago.com/downloads/sch_data/google_transit.zip
 system:
     name: Chicago Transit Authority
     code: chicago-cta
-routes:
-    file: chicago_cta_routes.txt
-    columns:
-        - route_id
-        - route_short_name
-        - route_long_name
-        - route_type
-stops:
-    file: chicago_cta_stops.txt
-    columns:
-        - stop_id
-        - stop_name
-        - stop_lat
-        - stop_lon
-trips:
-    file: chicago_cta_trips.txt
-    columns:
-        - trip_id
-        - route_id
-        - direction
-stop_times:
-    file: chicago_cta_stop_times.txt
-    columns:
-        - trip_id
-        - stop_id
-        - stop_sequence
+gtfs:
+    routes:
+        file: chicago_cta_routes.txt
+        columns:
+            - route_id
+            - route_short_name
+            - route_long_name
+            - route_type
+    stops:
+        file: chicago_cta_stops.txt
+        columns:
+            - stop_id
+            - stop_name
+            - stop_lat
+            - stop_lon
+    trips:
+        file: chicago_cta_trips.txt
+        columns:
+            - trip_id
+            - route_id
+            - direction
+    stop_times:
+        file: chicago_cta_stop_times.txt
+        columns:
+            - trip_id
+            - stop_id
+            - stop_sequence
 sql:
     routes_query: chicago_cta_routes.sql
     stops_query: chicago_cta_stops.sql

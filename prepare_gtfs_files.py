@@ -30,24 +30,24 @@ def main():
 	try:
 		to_process = (
 			(
-				'./gtfs/in/{0}'.format(config['routes']['file']),
-				'./gtfs/out/{0}'.format(config['routes']['file']),
-				config['routes']['columns'],
+				'./gtfs/in/{0}'.format(config['gtfs']['routes']['file']),
+				'./gtfs/out/{0}'.format(config['gtfs']['routes']['file']),
+				config['gtfs']['routes']['columns'],
 			),
 			(
-				'./gtfs/in/{0}'.format(config['stops']['file']),
-				'./gtfs/out/{0}'.format(config['stops']['file']),
-				config['stops']['columns'],
+				'./gtfs/in/{0}'.format(config['gtfs']['stops']['file']),
+				'./gtfs/out/{0}'.format(config['gtfs']['stops']['file']),
+				config['gtfs']['stops']['columns'],
 			),
 			(
-				'./gtfs/in/{0}'.format(config['trips']['file']),
-				'./gtfs/out/{0}'.format(config['trips']['file']),
-				config['trips']['columns'],
+				'./gtfs/in/{0}'.format(config['gtfs']['trips']['file']),
+				'./gtfs/out/{0}'.format(config['gtfs']['trips']['file']),
+				config['gtfs']['trips']['columns'],
 			),
 			(
-				'./gtfs/in/{0}'.format(config['stop_times']['file']),
-				'./gtfs/out/{0}'.format(config['stop_times']['file']),
-				config['stop_times']['columns'],
+				'./gtfs/in/{0}'.format(config['gtfs']['stop_times']['file']),
+				'./gtfs/out/{0}'.format(config['gtfs']['stop_times']['file']),
+				config['gtfs']['stop_times']['columns'],
 			),
 		)
 	except KeyError:
