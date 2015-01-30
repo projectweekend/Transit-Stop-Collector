@@ -19,6 +19,20 @@ def load_query_from_file(file):
 	return query
 
 
+def route_directions(directions):
+	return [d.strip() for d in directions.split(',') if d]
+
+
+def route_urls(system, type, id, directions):
+	urls = {
+		'all_stops': '/{0}/{1}/{2}'.format(system, type, id)
+	}
+	for d in directions:
+		# TODO: slugify the '_stops' key and the value assigned because you might have spaces
+		urls['{0}_stops'.format(d)] = '/{0}/{1}/{2}/{3}'.format(system, type, id, d)
+	return urls
+
+
 def route_documents(cursor):
 	for r in cursor:
 		document = {
@@ -26,14 +40,17 @@ def route_documents(cursor):
 			'id': r[1],
 			'name': r[2],
 			'type': r[3],
-			'directions': [d.strip() for d in r[4].split(',') if d],
+			'directions': route_directions(r[4]),
 			'urls': {
 				'all_stops': '/{0}/{1}/{2}'.format(r[0], r[3], r[1])
 			}
 		}
-		for d in document['directions']:
-			# TODO: slugify the '_stops' key and the value assigned because you might have spaces
-			document['urls']['{0}_stops'.format(d)] = '/{0}/{1}/{2}/{3}'.format(r[0], r[3], r[1], d)
+		document['urls'] = route_urls(
+							system=document['system'],
+							type=document['type'],
+							id=document['id'],
+							directions=document['directions'])
+
 		yield document
 
 
