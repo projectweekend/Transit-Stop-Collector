@@ -3,11 +3,19 @@ import csv
 
 from utils.config_utils import job_config
 
+def clean_up_row(row):
+	clean_row = {}
+	for k in row.keys():
+		clean_row[k.strip()] = row[k].strip()
+	return clean_row
+
 
 def strip_columns(row, columns_to_keep):
+	stripped_row = {}
 	for k in row.keys():
-		if k not in columns_to_keep:
-			del row[k]
+		if k in columns_to_keep:
+			stripped_row[k] = row[k]
+	return stripped_row
 
 
 def process_gtfs_file(input_file, output_file, columns_to_keep):
@@ -20,8 +28,9 @@ def process_gtfs_file(input_file, output_file, columns_to_keep):
 			writer.writeheader()
 
 			for row in reader:
-				strip_columns(row, columns_to_keep)
-				writer.writerow(row)
+				clean_row = clean_up_row(row)
+				stripped_row = strip_columns(clean_row, columns_to_keep)
+				writer.writerow(stripped_row)
 
 
 def main():
