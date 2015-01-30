@@ -32,6 +32,7 @@ def route_documents(cursor):
 			}
 		}
 		for d in document['directions']:
+			# TODO: slugify the '_stops' key and the value assigned because you might have spaces
 			document['urls']['{0}_stops'.format(d)] = '/{0}/{1}/{2}/{3}'.format(r[0], r[3], r[1], d)
 		yield document
 
