@@ -1,0 +1,34 @@
+feed_url: http://www.gtfs-data-exchange.com/agency/metra/latest.zip
+system:
+    name: Chicago Metra Rail
+    code: chicago-metra
+gtfs:
+    routes:
+        file: chicago_metra_routes.txt
+        columns:
+            - route_id
+            - route_short_name
+            - route_long_name
+            - route_type
+    stops:
+        file: chicago_metra_stops.txt
+        columns:
+            - stop_id
+            - stop_name
+            - stop_lat
+            - stop_lon
+    trips:
+        file: chicago_metra_trips.txt
+        columns:
+            - trip_id
+            - route_id
+            - trip_headsign
+    stop_times:
+        file: chicago_metra_stop_times.txt
+        columns:
+            - trip_id
+            - stop_id
+            - stop_sequence
+sql:
+    routes_query: chicago_metra_routes.sql
+    stops_query: chicago_metra_stops.sql
