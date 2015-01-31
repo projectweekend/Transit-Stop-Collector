@@ -3,19 +3,20 @@ import csv
 
 from utils.config_utils import job_config
 
+
+# GTFS files have inconsistent formatting, this cleans up the rows
 def clean_up_row(row):
 	clean_row = {}
-	for k in row.keys():
-		clean_row[k.strip()] = row[k].strip()
+	for k, v in row.items():
+		k = k.strip()
+		if isinstance(v, str):
+			v = v.strip()
+		clean_row[k] = v
 	return clean_row
 
 
 def strip_columns(row, columns_to_keep):
-	stripped_row = {}
-	for k in row.keys():
-		if k in columns_to_keep:
-			stripped_row[k] = row[k]
-	return stripped_row
+	return {k: v for k, v in row.items() if k in columns_to_keep}
 
 
 def process_gtfs_file(input_file, output_file, columns_to_keep):
