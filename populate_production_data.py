@@ -40,10 +40,7 @@ def route_documents(cursor):
 			'id': r[1],
 			'name': r[2],
 			'type': r[3],
-			'directions': route_directions(r[4]),
-			'urls': {
-				'all_stops': '/{0}/{1}/{2}'.format(r[0], r[3], r[1])
-			}
+			'directions': route_directions(r[4])
 		}
 		document['urls'] = route_urls(
 							system=document['system'],
