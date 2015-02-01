@@ -13,4 +13,4 @@ I'm pretty sure I'm the only person that will ever use this thing, so apologies 
 * `utils/`: A Python package for some basic utilities shared by the main scripts.
 * `prepare_gtfs_files.py`: A script that takes GTFS feed files from `gtfs/in/` and prepares them for import into staging tables. Prepared files are output into the `gtfs/out/` directory.
 * `populate_staging_data.py`: A script that imports data from prepared GTFS feed files (`gtfs/out/`) into the staging tables.
-* `populate_production_data.py`: A script that performs expensive queries against staging tables to build final output for the production database.
+* `populate_api_data.py`: A script that performs expensive queries against staging tables to build final output for the api database.
