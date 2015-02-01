@@ -19,11 +19,11 @@ def load_query_from_file(file):
 	return query
 
 
-def route_directions(directions):
+def directions_for_route(directions):
 	return [d.strip() for d in directions.split(',') if d]
 
 
-def route_urls(system, type, id, directions):
+def urls_for_route(system, type, id, directions):
 	urls = {
 		'all_stops': '/{0}/{1}/{2}'.format(system, type, id)
 	}
@@ -40,9 +40,9 @@ def route_documents(cursor):
 			'id': r[1],
 			'name': r[2],
 			'type': r[3],
-			'directions': route_directions(r[4])
+			'directions': directions_for_route(r[4])
 		}
-		document['urls'] = route_urls(
+		document['urls'] = urls_for_route(
 							system=document['system'],
 							type=document['type'],
 							id=document['id'],
