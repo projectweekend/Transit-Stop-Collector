@@ -35,36 +35,14 @@ def process_gtfs_file(input_file, output_file, columns_to_keep):
 
 
 def main():
-	config, config_file = job_config(sys.argv[1:])
+	config, _ = job_config(sys.argv[1:])
 
-	try:
-		to_process = (
-			(
-				'./gtfs/in/{0}'.format(config['gtfs']['routes']['file']),
-				'./gtfs/out/{0}'.format(config['gtfs']['routes']['file']),
-				config['gtfs']['routes']['columns'],
-			),
-			(
-				'./gtfs/in/{0}'.format(config['gtfs']['stops']['file']),
-				'./gtfs/out/{0}'.format(config['gtfs']['stops']['file']),
-				config['gtfs']['stops']['columns'],
-			),
-			(
-				'./gtfs/in/{0}'.format(config['gtfs']['trips']['file']),
-				'./gtfs/out/{0}'.format(config['gtfs']['trips']['file']),
-				config['gtfs']['trips']['columns'],
-			),
-			(
-				'./gtfs/in/{0}'.format(config['gtfs']['stop_times']['file']),
-				'./gtfs/out/{0}'.format(config['gtfs']['stop_times']['file']),
-				config['gtfs']['stop_times']['columns'],
-			),
-		)
-	except KeyError:
-		sys.exit("Config file '{0}' is not formatted properly".format(config_file))
+	for k in config['gtfs'].keys():
+		in_file = './gtfs/in/{0}'.format(config['gtfs'][k]['file'])
+		out_file = './gtfs/out/{0}'.format(config['gtfs'][k]['file'])
+		columns_to_keep = config['gtfs'][k]['columns']
 
-	for item in to_process:
-		process_gtfs_file(item[0], item[1], item[2])
+		process_gtfs_file(in_file, out_file, columns_to_keep)
 
 
 if __name__ == '__main__':
