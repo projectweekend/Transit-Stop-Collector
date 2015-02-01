@@ -1,8 +1,10 @@
 import sys
 
+
 from utils.psql_utils import connect_to_psql
 from utils.mongo_utils import connect_to_mongo
 from utils.config_utils import main_config, job_config
+from utils.text_utils import slugify
 
 
 MAIN_CONFIG, MAIN_CONFIG_FILE = main_config(sys.argv[1:])
@@ -25,11 +27,11 @@ def directions_for_route(directions):
 
 def urls_for_route(system, type, id, directions):
 	urls = {
-		'all_stops': '/{0}/{1}/{2}'.format(system, type, id)
+		'All Stops': '/{0}/{1}/{2}'.format(system, type, id)
 	}
 	for d in directions:
-		# TODO: slugify the '_stops' key and the value assigned because you might have spaces
-		urls['{0}_stops'.format(d)] = '/{0}/{1}/{2}/{3}'.format(system, type, id, d)
+		url_path = '/{0}/{1}/{2}/{3}'.format(system, type, id, slugify(d))
+		urls['{0}'.format(d)] = url_path
 	return urls
 
 
@@ -61,7 +63,8 @@ def stop_documents(cursor):
 			'route_id': r[4],
 			'route_name': r[5],
 			'route_type': r[6],
-			'route_direction': r[7]
+			'route_direction': r[7],
+			'route_direction_slug': slugify(r[7])
 		}
 		yield document
 
