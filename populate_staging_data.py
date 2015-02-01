@@ -28,7 +28,7 @@ def main():
 	try:
 		cursor.execute(query)
 	except psycopg2.ProgrammingError:
-		sys.exit("Invalid job name, tables matching '{}' prefix do not exist".format(file_prefix))
+		sys.exit("Invalid job name, tables matching '{0}' prefix do not exist".format(file_prefix))
 
 	conn.commit()
 
