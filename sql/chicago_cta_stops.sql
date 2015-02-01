@@ -28,7 +28,7 @@ SELECT          'chicago-cta' as system,
                 trim(lower(r.route_id)) as route_id,
                 trim(r.route_long_name) as route_name,
                 'bus' as route_type,
-                trim(lower(t.direction)) as route_direction
+                trim(initcap(t.direction)) as route_direction
 FROM            chicago_cta_routes as r
 JOIN            chicago_cta_trips as t
                 ON t.route_id = r.route_id
