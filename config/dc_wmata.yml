@@ -1,0 +1,35 @@
+feed_url: none
+system:
+    name: Washington Metropolitan Area Transit Authority
+    code: dc-wmata
+gtfs:
+    routes:
+        file: dc_wmata_routes.txt
+        columns:
+            - route_id
+            - route_short_name
+            - route_long_name
+            - route_type
+    stops:
+        file: dc_wmata_stops.txt
+        columns:
+            - stop_id
+            - stop_name
+            - stop_lat
+            - stop_lon
+    trips:
+        file: dc_wmata_trips.txt
+        columns:
+            - trip_id
+            - route_id
+            - trip_headsign
+            - direction_id
+    stop_times:
+        file: dc_wmata_stop_times.txt
+        columns:
+            - trip_id
+            - stop_id
+            - stop_sequence
+sql:
+    routes_query: dc_wmata_routes.sql
+    stops_query: dc_wmata_stops.sql
