@@ -1,0 +1,4 @@
+feed_url: http://web.mta.info/developers/data/nyct/subway/google_transit.zip
+system:
+    name: New York City Transit Subway
+    code: nyc-mta-subway
