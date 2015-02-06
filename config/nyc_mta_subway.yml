@@ -1,4 +1,34 @@
 feed_url: http://web.mta.info/developers/data/nyct/subway/google_transit.zip
 system:
-    name: New York City Transit Subway
+    name: MTA New York City Transit Subway
     code: nyc-mta-subway
+gtfs:
+    routes:
+        file: nyc_mta_subway_routes.txt
+        columns:
+            - route_id
+            - route_short_name
+            - route_long_name
+            - route_type
+    stops:
+        file: nyc_mta_subway_stops.txt
+        columns:
+            - stop_id
+            - stop_name
+            - stop_lat
+            - stop_lon
+    trips:
+        file: nyc_mta_subway_trips.txt
+        columns:
+            - trip_id
+            - route_id
+            - trip_headsign
+    stop_times:
+        file: nyc_mta_subway_stop_times.txt
+        columns:
+            - trip_id
+            - stop_id
+            - stop_sequence
+sql:
+    routes_query: nyc_mta_subway_routes.sql
+    stops_query: nyc_mta_subway_stops.sql
