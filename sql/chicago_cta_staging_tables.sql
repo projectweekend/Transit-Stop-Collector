@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS chicago_cta_trips (
     trip_id             char(50),
     route_id            char(50),
     direction           char(50),
+    direction_id        integer,
     CONSTRAINT          chicago_cta_trip_id_pk PRIMARY KEY(trip_id),
     FOREIGN KEY         (route_id) REFERENCES chicago_cta_routes (route_id)
 );
