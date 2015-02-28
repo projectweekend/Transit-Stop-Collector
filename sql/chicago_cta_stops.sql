@@ -1,5 +1,5 @@
 SELECT          'chicago-cta' as system,
-                trim(s.stop_name) as name,
+                replace(trim(s.stop_name), '-' || trim(substring(trim(r.route_long_name), 0, position(' ' in trim(r.route_long_name)))), '') as name,
                 s.stop_lat as latitude,
                 s.stop_lon as longitude,
                 trim(lower(r.route_id)) as route_id,
