@@ -33,3 +33,11 @@ CREATE TABLE IF NOT EXISTS chicago_cta_stop_times (
     FOREIGN KEY         (trip_id) REFERENCES chicago_cta_trips (trip_id),
     FOREIGN KEY         (stop_id) REFERENCES chicago_cta_stops (stop_id)
 );
+
+
+CREATE TABLE IF NOT EXISTS chicago_cta_train_stops_ordering (
+    stop_name           char(100),
+    route_id            char(50),
+    route_name          char(250),
+    stop_order          integer
+);
