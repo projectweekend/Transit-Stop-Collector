@@ -29,6 +29,9 @@ gtfs:
             - trip_id
             - stop_id
             - stop_sequence
+export:
+    train: chicago_metra_train_export_ordering.txt
 sql:
     routes_query: chicago_metra_routes.sql
     stops_query: chicago_metra_stops.sql
+    train_export: chicago_metra_train_export.sql
