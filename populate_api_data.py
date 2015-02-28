@@ -64,7 +64,8 @@ def stop_documents(cursor):
 			'route_name': r[5],
 			'route_type': r[6],
 			'route_direction': r[7],
-			'route_direction_slug': slugify(r[7])
+			'route_direction_slug': slugify(r[7]),
+			'stop_order': r[8]
 		}
 		yield document
 
