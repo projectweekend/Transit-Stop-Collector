@@ -5,7 +5,8 @@ SELECT          'chicago-metra' as system,
                 trim(lower(r.route_id)) as route_id,
                 trim(r.route_long_name) as route_name,
                 'train' as route_type,
-                'n/a' as route_direction
+                'n/a' as route_direction,
+                o.stop_order
 FROM            chicago_metra_routes as r
 JOIN            chicago_metra_trips as t
                 ON t.route_id = r.route_id
@@ -13,7 +14,11 @@ JOIN            chicago_metra_stop_times as st
                 ON st.trip_id = t.trip_id
 JOIN            chicago_metra_stops as s
                 ON s.stop_id = st.stop_id
+JOIN            chicago_metra_train_stops_ordering as o
+                ON trim(s.stop_name) = o.stop_name AND
+                   trim(lower(r.route_id)) = o.route_id
 GROUP BY        s.stop_name,
                 s.stop_lat,
                 s.stop_lon,
-                r.route_id
+                r.route_id,
+                o.stop_order

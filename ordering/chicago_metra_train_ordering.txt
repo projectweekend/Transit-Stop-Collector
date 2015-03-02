@@ -1,0 +1,252 @@
+stop_name,route_id,route_name,stop_order
+Aurora,bnsf,Burlington Northern,1
+Route 59,bnsf,Burlington Northern,2
+Naperville,bnsf,Burlington Northern,3
+Lisle,bnsf,Burlington Northern,4
+Belmont,bnsf,Burlington Northern,5
+Downers Grove,bnsf,Burlington Northern,6
+Fairview Ave.,bnsf,Burlington Northern,7
+Westmont,bnsf,Burlington Northern,8
+Clarendon Hills,bnsf,Burlington Northern,9
+West Hinsdale,bnsf,Burlington Northern,10
+Hinsdale,bnsf,Burlington Northern,11
+Highlands,bnsf,Burlington Northern,12
+Western Springs,bnsf,Burlington Northern,13
+Stone Ave.,bnsf,Burlington Northern,14
+LaGrange Road,bnsf,Burlington Northern,15
+Congress Park,bnsf,Burlington Northern,16
+Brookfield,bnsf,Burlington Northern,17
+Hollywood,bnsf,Burlington Northern,18
+Riverside,bnsf,Burlington Northern,19
+Harlem Ave.,bnsf,Burlington Northern,20
+Berwyn,bnsf,Burlington Northern,21
+Lavergne,bnsf,Burlington Northern,22
+Cicero,bnsf,Burlington Northern,23
+Western Avenue,bnsf,Burlington Northern,24
+Halsted Street,bnsf,Burlington Northern,25
+Chicago Union Station,bnsf,Burlington Northern,26
+Chicago Union Station,hc,Heritage Corridor,6
+Joliet,hc,Heritage Corridor,1
+Lemont,hc,Heritage Corridor,3
+Lockport,hc,Heritage Corridor,2
+Summit,hc,Heritage Corridor,5
+Willow Springs,hc,Heritage Corridor,4
+Randolph St.,me,Metra Electric,49
+Blue Island,me,Metra Electric,1
+Burr Oak,me,Metra Electric,2
+Ashland,me,Metra Electric,3
+Racine,me,Metra Electric,4
+West Pullman,me,Metra Electric,5
+Stewart Ridge,me,Metra Electric,6
+State St.,me,Metra Electric,7
+South Chicago (93rd),me,Metra Electric,8
+87th St.,me,Metra Electric,9
+83rd St.,me,Metra Electric,10
+79th St. (Chatham),me,Metra Electric,11
+Windsor Park,me,Metra Electric,12
+South Shore,me,Metra Electric,13
+Bryn Mawr,me,Metra Electric,14
+Stony Island,me,Metra Electric,15
+University Park,me,Metra Electric,16
+Richton Park,me,Metra Electric,17
+Matteson,me,Metra Electric,18
+211th St.,me,Metra Electric,19
+Olympia Fields,me,Metra Electric,20
+Flossmoor,me,Metra Electric,21
+Homewood,me,Metra Electric,22
+Calumet,me,Metra Electric,23
+Hazel Crest,me,Metra Electric,24
+Harvey,me,Metra Electric,25
+147th St.,me,Metra Electric,26
+Ivanhoe,me,Metra Electric,27
+Riverdale,me,Metra Electric,28
+Kensington,me,Metra Electric,29
+111th St. (Pullman),me,Metra Electric,30
+107th St.,me,Metra Electric,31
+103rd St. (Rosemoor),me,Metra Electric,32
+95th St.,me,Metra Electric,33
+91st St.,me,Metra Electric,34
+87th St. (Woodruff),me,Metra Electric,35
+83rd St. (Avalon Park),me,Metra Electric,36
+Cheltenham (79th St.),me,Metra Electric,37
+75th St. (Grand Crossing),me,Metra Electric,38
+63rd St.,me,Metra Electric,39
+59th St. (U. of Chicago),me,Metra Electric,40
+55th - 56th - 57th St.,me,Metra Electric,41
+51st/53rd St. (Hyde Park),me,Metra Electric,42
+47th St. (Kenwood),me,Metra Electric,43
+27th St.,me,Metra Electric,44
+McCormick Place,me,Metra Electric,45
+18th St.,me,Metra Electric,46
+Museum Campus/11th St.,me,Metra Electric,47
+Van Buren St.,me,Metra Electric,48
+Fox Lake,md-n,Milwaukee North,1
+Ingleside,md-n,Milwaukee North,2
+Long Lake,md-n,Milwaukee North,3
+Round Lake,md-n,Milwaukee North,4
+Grayslake,md-n,Milwaukee North,5
+Prairie Crossing,md-n,Milwaukee North,6
+Libertyville,md-n,Milwaukee North,7
+Lake Forest,md-n,Milwaukee North,8
+Deerfield,md-n,Milwaukee North,9
+Lake-Cook,md-n,Milwaukee North,10
+Northbrook,md-n,Milwaukee North,11
+Glen/N. Glenview,md-n,Milwaukee North,12
+Glenview,md-n,Milwaukee North,13
+Golf,md-n,Milwaukee North,14
+Morton Grove,md-n,Milwaukee North,15
+Edgebrook,md-n,Milwaukee North,16
+Forest Glen,md-n,Milwaukee North,17
+Mayfair,md-n,Milwaukee North,18
+Grayland,md-n,Milwaukee North,19
+Healy,md-n,Milwaukee North,20
+Western Ave,md-n,Milwaukee North,21
+Chicago Union Station,md-n,Milwaukee North,22
+Big Timber,md-w,Milwaukee West,1
+Elgin,md-w,Milwaukee West,2
+National St,md-w,Milwaukee West,3
+Bartlett,md-w,Milwaukee West,4
+Hanover Park,md-w,Milwaukee West,5
+Schaumburg,md-w,Milwaukee West,6
+Roselle,md-w,Milwaukee West,7
+Medinah,md-w,Milwaukee West,8
+Itasca,md-w,Milwaukee West,9
+Wood Dale,md-w,Milwaukee West,10
+Bensenville,md-w,Milwaukee West,11
+Mannheim,md-w,Milwaukee West,12
+Franklin Park,md-w,Milwaukee West,13
+River Grove,md-w,Milwaukee West,14
+Elmwood Park,md-w,Milwaukee West,15
+Mont Clare,md-w,Milwaukee West,16
+Mars,md-w,Milwaukee West,17
+Galewood,md-w,Milwaukee West,18
+Hanson Park,md-w,Milwaukee West,19
+Grand/Cicero,md-w,Milwaukee West,20
+Western Ave,md-w,Milwaukee West,21
+Chicago Union Station,md-w,Milwaukee West,22
+Antioch,ncs,North Central Service,1
+Lake Villa,ncs,North Central Service,2
+Round Lake Beach,ncs,North Central Service,3
+Washington St (Grayslake),ncs,North Central Service,4
+Prairie Crossing.,ncs,North Central Service,5
+Mundelein,ncs,North Central Service,6
+Vernon Hills,ncs,North Central Service,7
+Prairie View,ncs,North Central Service,8
+Buffalo Grove,ncs,North Central Service,9
+Wheeling,ncs,North Central Service,10
+Prospect Hts,ncs,North Central Service,11
+O'Hare Transfer,ncs,North Central Service,12
+Rosemont,ncs,North Central Service,13
+Schiller Park,ncs,North Central Service,14
+Franklin Pk,ncs,North Central Service,15
+River Grove,ncs,North Central Service,16
+Western Ave,ncs,North Central Service,17
+Chicago Union Station,ncs,North Central Service,18
+Joliet,ri,Rock Island,1
+New Lenox,ri,Rock Island,2
+Mokena,ri,Rock Island,3
+Hickory Creek,ri,Rock Island,4
+Tinley-80th,ri,Rock Island,5
+Tinley Park,ri,Rock Island,6
+Oak Forest,ri,Rock Island,7
+Midlothian,ri,Rock Island,8
+Robbins,ri,Rock Island,9
+Blue Island-Vermont,ri,Rock Island,10
+Prairie St.,ri,Rock Island,11
+123rd St.,ri,Rock Island,12
+119th St.,ri,Rock Island,13
+115th St. - Morgan Park,ri,Rock Island,14
+111th St. - Morgan Park,ri,Rock Island,15
+107th St. - Beverly Hills,ri,Rock Island,16
+103rd St. - Beverly Hills,ri,Rock Island,17
+99th St. - Beverly Hills,ri,Rock Island,18
+95th St. - Beverly Hills,ri,Rock Island,19
+91st St. - Beverly Hills,ri,Rock Island,20
+Brainerd,ri,Rock Island,21
+103rd St.-Washington Hts.,ri,Rock Island,22
+95th St.-Longwood,ri,Rock Island,23
+Gresham,ri,Rock Island,24
+"""35th St. / """"Lou"""" Jones""",ri,Rock Island,25
+LaSalle Street,ri,Rock Island,26
+Manhattan,sws,Southwest Service,1
+Laraway Road,sws,Southwest Service,2
+Orland Park 179th,sws,Southwest Service,3
+Orland Park 153rd,sws,Southwest Service,4
+Orland Park 143rd,sws,Southwest Service,5
+Palos Park,sws,Southwest Service,6
+Palos Heights,sws,Southwest Service,7
+Worth,sws,Southwest Service,8
+Chicago Ridge,sws,Southwest Service,9
+Oak Lawn,sws,Southwest Service,10
+Ashburn,sws,Southwest Service,11
+Wrightwood,sws,Southwest Service,12
+Chicago Union Station,sws,Southwest Service,13
+Kenosha,up-n,Union Pacific North,1
+Winthrop Harbor,up-n,Union Pacific North,2
+Zion,up-n,Union Pacific North,3
+Waukegan,up-n,Union Pacific North,4
+North Chicago,up-n,Union Pacific North,5
+Great Lakes,up-n,Union Pacific North,6
+Lake Bluff,up-n,Union Pacific North,7
+Lake Forest.,up-n,Union Pacific North,8
+Fort Sheridan,up-n,Union Pacific North,9
+Highwood,up-n,Union Pacific North,10
+Highland Park,up-n,Union Pacific North,11
+Ravinia,up-n,Union Pacific North,12
+Ravinia Park,up-n,Union Pacific North,13
+Braeside,up-n,Union Pacific North,14
+Glencoe,up-n,Union Pacific North,15
+Hubbard Woods,up-n,Union Pacific North,16
+Winnetka,up-n,Union Pacific North,17
+Indian Hill,up-n,Union Pacific North,18
+Kenilworth,up-n,Union Pacific North,19
+Wilmette,up-n,Union Pacific North,20
+Central St.,up-n,Union Pacific North,21
+Evanston (Davis St.),up-n,Union Pacific North,22
+Main St.,up-n,Union Pacific North,23
+Rogers Park,up-n,Union Pacific North,24
+Ravenswood,up-n,Union Pacific North,25
+Clybourn,up-n,Union Pacific North,26
+Chicago OTC,up-n,Union Pacific North,27
+Harvard,up-nw,Union Pacific Northwest,1
+McHenry,up-nw,Union Pacific Northwest,2
+Woodstock,up-nw,Union Pacific Northwest,3
+Crystal Lake,up-nw,Union Pacific Northwest,4
+Pingree Road,up-nw,Union Pacific Northwest,5
+Cary,up-nw,Union Pacific Northwest,6
+Fox River Grove,up-nw,Union Pacific Northwest,7
+Barrington,up-nw,Union Pacific Northwest,8
+Palatine,up-nw,Union Pacific Northwest,9
+Arlington Park,up-nw,Union Pacific Northwest,10
+Arlington Heights,up-nw,Union Pacific Northwest,11
+Mt. Prospect,up-nw,Union Pacific Northwest,12
+Cumberland,up-nw,Union Pacific Northwest,13
+Des Plaines,up-nw,Union Pacific Northwest,14
+Dee Road,up-nw,Union Pacific Northwest,15
+Park Ridge,up-nw,Union Pacific Northwest,16
+Edison Park,up-nw,Union Pacific Northwest,17
+Norwood Park,up-nw,Union Pacific Northwest,18
+Gladstone Park,up-nw,Union Pacific Northwest,19
+Jefferson Park,up-nw,Union Pacific Northwest,20
+Irving Park,up-nw,Union Pacific Northwest,21
+Clybourn,up-nw,Union Pacific Northwest,22
+Chicago OTC,up-nw,Union Pacific Northwest,23
+Elburn,up-w,Union Pacific West,1
+La Fox,up-w,Union Pacific West,2
+Geneva,up-w,Union Pacific West,3
+West Chicago,up-w,Union Pacific West,4
+Winfield,up-w,Union Pacific West,5
+Wheaton,up-w,Union Pacific West,6
+College Ave,up-w,Union Pacific West,7
+Glen Ellyn,up-w,Union Pacific West,8
+Lombard,up-w,Union Pacific West,9
+Villa Park,up-w,Union Pacific West,10
+Elmhurst,up-w,Union Pacific West,11
+Berkeley,up-w,Union Pacific West,12
+Bellwood,up-w,Union Pacific West,13
+Melrose Park,up-w,Union Pacific West,14
+Maywood,up-w,Union Pacific West,15
+River Forest,up-w,Union Pacific West,16
+Oak Park,up-w,Union Pacific West,17
+Kedzie,up-w,Union Pacific West,18
+Chicago OTC,up-w,Union Pacific West,19
