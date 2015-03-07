@@ -6,7 +6,8 @@ SELECT          'chicago-cta' as system,
                 trim(r.route_long_name) as route_name,
                 'train' as route_type,
                 'n/a' as route_direction,
-                o.stop_order
+                o.stop_order,
+                o.is_underground as stop_is_underground
 FROM            chicago_cta_routes as r
 JOIN            chicago_cta_trips as t
                 ON t.route_id = r.route_id
@@ -22,7 +23,8 @@ GROUP BY        s.stop_name,
                 s.stop_lat,
                 s.stop_lon,
                 r.route_id,
-                o.stop_order
+                o.stop_order,
+                o.is_underground
 
 UNION
 
@@ -34,7 +36,8 @@ SELECT          'chicago-cta' as system,
                 trim(r.route_long_name) as route_name,
                 'bus' as route_type,
                 trim(initcap(t.direction)) as route_direction,
-                0 as stop_order
+                0 as stop_order,
+                0 stop_is_underground
 FROM            chicago_cta_routes as r
 JOIN            chicago_cta_trips as t
                 ON t.route_id = r.route_id

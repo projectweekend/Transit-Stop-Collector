@@ -1,195 +1,195 @@
-stop_name,route_id,route_name,stop_order
-Addison-Blue,blue,Blue Line,8
-Austin-Blue,blue,Blue Line,30
-Belmont-Blue,blue,Blue Line,9
-California-O'Hare,blue,Blue Line,11
-Chicago-Blue,blue,Blue Line,15
-Cicero-Forest Park,blue,Blue Line,29
-Clark/Lake (Subway),blue,Blue Line,17
-Clinton-Blue,blue,Blue Line,22
-Cumberland,blue,Blue Line,3
-Damen-O'Hare,blue,Blue Line,13
-Division,blue,Blue Line,14
-Forest Park,blue,Blue Line,33
-Grand-Blue,blue,Blue Line,16
-Harlem-Forest Park,blue,Blue Line,4
-Harlem-O'Hare,blue,Blue Line,32
-Illinois Medical District,blue,Blue Line,25
-Irving Park-Blue,blue,Blue Line,7
-Jackson-Blue,blue,Blue Line,20
-Jefferson Park,blue,Blue Line,5
-Kedzie-Homan,blue,Blue Line,27
-LaSalle,blue,Blue Line,21
-Logan Square,blue,Blue Line,10
-Monroe-Blue,blue,Blue Line,19
-Montrose-Blue,blue,Blue Line,6
-O'Hare,blue,Blue Line,1
-Oak Park-Blue,blue,Blue Line,31
-Pulaski-Forest Park,blue,Blue Line,28
-Racine,blue,Blue Line,24
-Rosemont,blue,Blue Line,2
-UIC-Halsted,blue,Blue Line,23
-Washington-Blue,blue,Blue Line,18
-Western-Forest Park,blue,Blue Line,26
-Western-O'Hare,blue,Blue Line,12
-Adams/Wabash,brn,Brown Line,24
-Addison-Brown,brn,Brown Line,9
-Armitage,brn,Brown Line,16
-Belmont,brn,Brown Line,12
-Chicago-Brown,brn,Brown Line,18
-Clark/Lake (Elevated),brn,Brown Line,28
-Damen-Brown,brn,Brown Line,6
-Diversey,brn,Brown Line,14
-Francisco,brn,Brown Line,3
-Fullerton,brn,Brown Line,15
-Harold Washington Library,brn,Brown Line,23
-Irving Park-Brown,brn,Brown Line,8
-Kedzie-Brown,brn,Brown Line,2
-Kimball,brn,Brown Line,1
-LaSalle/Van Buren,brn,Brown Line,22
-Madison/Wabash,brn,Brown Line,25
-Merchandise Mart,brn,Brown Line,19
-Montrose-Brown,brn,Brown Line,7
-Paulina,brn,Brown Line,10
-Quincy/Wells,brn,Brown Line,21
-Randolph/Wabash,brn,Brown Line,26
-Rockwell,brn,Brown Line,4
-Sedgwick,brn,Brown Line,17
-Southport,brn,Brown Line,11
-State/Lake,brn,Brown Line,27
-Washington/Wells,brn,Brown Line,20
-Wellington,brn,Brown Line,13
-Western-Brown,brn,Brown Line,5
-Harlem-Green,g,Green Line,1
-Oak Park-Green,g,Green Line,2
-Ridgeland,g,Green Line,3
-Austin-Green,g,Green Line,4
-Central-Green,g,Green Line,5
-Laramie,g,Green Line,6
-Cicero-Green,g,Green Line,7
-Pulaski-Green,g,Green Line,8
-Conservatory,g,Green Line,9
-Kedzie-Green,g,Green Line,10
-California-Green,g,Green Line,11
-Ashland-Lake,g,Green Line,12
-Morgan,g,Green Line,13
-Clinton-Green,g,Green Line,14
-Clark/Lake (Elevated),g,Green Line,15
-State/Lake,g,Green Line,16
-Randolph/Wabash,g,Green Line,17
-Madison/Wabash,g,Green Line,18
-Adams/Wabash,g,Green Line,19
-Roosevelt (Elevated),g,Green Line,20
-Cermak-McCormick Place,g,Green Line,21
-35-Bronzeville-IIT,g,Green Line,22
-Indiana,g,Green Line,23
-43rd,g,Green Line,24
-47th-Green,g,Green Line,25
-51st,g,Green Line,26
-Garfield-Green,g,Green Line,27
-King Drive,g,Green Line,28
-East 63rd-Cottage Grove,g,Green Line,29
-Halsted-Green,g,Green Line,30
-35th/Archer,org,Orange Line,5
-Adams/Wabash,org,Orange Line,17
-Ashland-Orange,org,Orange Line,6
-Clark/Lake (Elevated),org,Orange Line,13
-Halsted-Orange,org,Orange Line,7
-Harold Washington Library,org,Orange Line,9
-Kedzie-Orange,org,Orange Line,3
-LaSalle/Van Buren,org,Orange Line,10
-Madison/Wabash,org,Orange Line,16
-Midway,org,Orange Line,1
-Pulaski-Orange,org,Orange Line,2
-Quincy/Wells,org,Orange Line,11
-Randolph/Wabash,org,Orange Line,15
-Roosevelt (Elevated),org,Orange Line,8
-State/Lake,org,Orange Line,14
-Washington/Wells,org,Orange Line,12
-Western-Orange,org,Orange Line,4
-18th,pink,Pink Line,10
-54th/Cermak,pink,Pink Line,1
-Adams/Wabash,pink,Pink Line,19
-Ashland-Lake,pink,Pink Line,12
-California-Cermak,pink,Pink Line,7
-Central Park,pink,Pink Line,5
-Cicero-Cermak,pink,Pink Line,2
-Clark/Lake (Elevated),pink,Pink Line,15
-Clinton-Green,pink,Pink Line,14
-Damen-Cermak,pink,Pink Line,9
-Harold Washington Library,pink,Pink Line,20
-Kedzie-Cermak,pink,Pink Line,6
-Kostner,pink,Pink Line,3
-LaSalle/Van Buren,pink,Pink Line,21
-Madison/Wabash,pink,Pink Line,18
-Morgan,pink,Pink Line,13
-Polk,pink,Pink Line,11
-Pulaski-Cermak,pink,Pink Line,4
-Quincy/Wells,pink,Pink Line,22
-Randolph/Wabash,pink,Pink Line,17
-State/Lake,pink,Pink Line,16
-Washington/Wells,pink,Pink Line,23
-Western-Cermak,pink,Pink Line,8
-Adams/Wabash,p,Purple Line,21
-Armitage,p,Purple Line,14
-Belmont,p,Purple Line,10
-Central-Purple,p,Purple Line,2
-Chicago-Brown,p,Purple Line,16
-Clark/Lake (Elevated),p,Purple Line,18
-Davis,p,Purple Line,5
-Dempster,p,Purple Line,6
-Diversey,p,Purple Line,12
-Foster,p,Purple Line,4
-Fullerton,p,Purple Line,13
-Harold Washington Library,p,Purple Line,22
-Howard,p,Purple Line,9
-LaSalle/Van Buren,p,Purple Line,23
-Linden,p,Purple Line,1
-Madison/Wabash,p,Purple Line,20
-Main,p,Purple Line,7
-Merchandise Mart,p,Purple Line,17
-Noyes,p,Purple Line,3
-Quincy/Wells,p,Purple Line,24
-Randolph/Wabash,p,Purple Line,20
-Sedgwick,p,Purple Line,15
-South Boulevard,p,Purple Line,8
-State/Lake,p,Purple Line,19
-Washington/Wells,p,Purple Line,25
-Wellington,p,Purple Line,11
-47th-Red,red,Red Line,27
-63rd,red,Red Line,29
-69th,red,Red Line,30
-79th,red,Red Line,31
-87th,red,Red Line,32
-95th,red,Red Line,33
-Addison-Red,red,Red Line,13
-Argyle,red,Red Line,9
-Belmont,red,Red Line,14
-Berwyn,red,Red Line,8
-Bryn Mawr,red,Red Line,7
-Cermak-Chinatown,red,Red Line,25
-Chicago-Red,red,Red Line,18
-Clark/Division,red,Red Line,17
-Fullerton,red,Red Line,15
-Garfield-Red,red,Red Line,28
-Grand-Red,red,Red Line,19
-Granville,red,Red Line,5
-Harrison,red,Red Line,23
-Howard,red,Red Line,1
-Jackson-Red,red,Red Line,22
-Jarvis,red,Red Line,2
-Lake,red,Red Line,20
-Lawrence,red,Red Line,10
-Loyola,red,Red Line,4
-Monroe-Red,red,Red Line,21
-Morse,red,Red Line,3
-North/Clybourn,red,Red Line,16
-Roosevelt (Subway),red,Red Line,24
-Sheridan,red,Red Line,12
-Sox-35th,red,Red Line,26
-Thorndale,red,Red Line,6
-Wilson,red,Red Line,11
-Dempster-Skokie,y,Yellow Line,1
-Howard,y,Yellow Line,3
-Oakton-Skokie,y,Yellow Line,2
-Ashland/63rd,g,Green Line,31
+name,route_id,route_name,order,is_underground
+Addison-Blue,blue,Blue Line,8,0
+Austin-Blue,blue,Blue Line,30,0
+Belmont-Blue,blue,Blue Line,9,1
+California-O'Hare,blue,Blue Line,11,0
+Chicago-Blue,blue,Blue Line,15,1
+Cicero-Forest Park,blue,Blue Line,29,0
+Clark/Lake (Subway),blue,Blue Line,17,1
+Clinton-Blue,blue,Blue Line,22,1
+Cumberland,blue,Blue Line,3,0
+Damen-O'Hare,blue,Blue Line,13,0
+Division,blue,Blue Line,14,1
+Forest Park,blue,Blue Line,33,0
+Grand-Blue,blue,Blue Line,16,1
+Harlem-Forest Park,blue,Blue Line,4,0
+Harlem-O'Hare,blue,Blue Line,32,0
+Illinois Medical District,blue,Blue Line,25,0
+Irving Park-Blue,blue,Blue Line,7,0
+Jackson-Blue,blue,Blue Line,20,1
+Jefferson Park,blue,Blue Line,5,0
+Kedzie-Homan,blue,Blue Line,27,0
+LaSalle,blue,Blue Line,21,0
+Logan Square,blue,Blue Line,10,1
+Monroe-Blue,blue,Blue Line,19,1
+Montrose-Blue,blue,Blue Line,6,0
+O'Hare,blue,Blue Line,1,1
+Oak Park-Blue,blue,Blue Line,31,0
+Pulaski-Forest Park,blue,Blue Line,28,0
+Racine,blue,Blue Line,24,0
+Rosemont,blue,Blue Line,2,0
+UIC-Halsted,blue,Blue Line,23,0
+Washington-Blue,blue,Blue Line,18,1
+Western-Forest Park,blue,Blue Line,26,0
+Western-O'Hare,blue,Blue Line,12,0
+Adams/Wabash,brn,Brown Line,24,0
+Addison-Brown,brn,Brown Line,9,0
+Armitage,brn,Brown Line,16,0
+Belmont,brn,Brown Line,12,0
+Chicago-Brown,brn,Brown Line,18,0
+Clark/Lake (Elevated),brn,Brown Line,28,0
+Damen-Brown,brn,Brown Line,6,0
+Diversey,brn,Brown Line,14,0
+Francisco,brn,Brown Line,3,0
+Fullerton,brn,Brown Line,15,0
+Harold Washington Library,brn,Brown Line,23,0
+Irving Park-Brown,brn,Brown Line,8,0
+Kedzie-Brown,brn,Brown Line,2,0
+Kimball,brn,Brown Line,1,0
+LaSalle/Van Buren,brn,Brown Line,22,1
+Madison/Wabash,brn,Brown Line,25,0
+Merchandise Mart,brn,Brown Line,19,0
+Montrose-Brown,brn,Brown Line,7,0
+Paulina,brn,Brown Line,10,0
+Quincy/Wells,brn,Brown Line,21,0
+Randolph/Wabash,brn,Brown Line,26,0
+Rockwell,brn,Brown Line,4,0
+Sedgwick,brn,Brown Line,17,0
+Southport,brn,Brown Line,11,0
+State/Lake,brn,Brown Line,27,0
+Washington/Wells,brn,Brown Line,20,0
+Wellington,brn,Brown Line,13,0
+Western-Brown,brn,Brown Line,5,0
+Harlem-Green,g,Green Line,1,0
+Oak Park-Green,g,Green Line,2,0
+Ridgeland,g,Green Line,3,0
+Austin-Green,g,Green Line,4,0
+Central-Green,g,Green Line,5,0
+Laramie,g,Green Line,6,0
+Cicero-Green,g,Green Line,7,0
+Pulaski-Green,g,Green Line,8,0
+Conservatory,g,Green Line,9,0
+Kedzie-Green,g,Green Line,10,0
+California-Green,g,Green Line,11,0
+Ashland-Lake,g,Green Line,12,0
+Morgan,g,Green Line,13,0
+Clinton-Green,g,Green Line,14,0
+Clark/Lake (Elevated),g,Green Line,15,0
+State/Lake,g,Green Line,16,0
+Randolph/Wabash,g,Green Line,17,0
+Madison/Wabash,g,Green Line,18,0
+Adams/Wabash,g,Green Line,19,0
+Roosevelt (Elevated),g,Green Line,20,0
+Cermak-McCormick Place,g,Green Line,21,0
+35-Bronzeville-IIT,g,Green Line,22,0
+Indiana,g,Green Line,23,0
+43rd,g,Green Line,24,0
+47th-Green,g,Green Line,25,0
+51st,g,Green Line,26,0
+Garfield-Green,g,Green Line,27,0
+King Drive,g,Green Line,28,0
+East 63rd-Cottage Grove,g,Green Line,29,0
+Halsted-Green,g,Green Line,30,0
+35th/Archer,org,Orange Line,5,0
+Adams/Wabash,org,Orange Line,17,0
+Ashland-Orange,org,Orange Line,6,0
+Clark/Lake (Elevated),org,Orange Line,13,0
+Halsted-Orange,org,Orange Line,7,0
+Harold Washington Library,org,Orange Line,9,0
+Kedzie-Orange,org,Orange Line,3,0
+LaSalle/Van Buren,org,Orange Line,10,0
+Madison/Wabash,org,Orange Line,16,0
+Midway,org,Orange Line,1,0
+Pulaski-Orange,org,Orange Line,2,0
+Quincy/Wells,org,Orange Line,11,0
+Randolph/Wabash,org,Orange Line,15,0
+Roosevelt (Elevated),org,Orange Line,8,0
+State/Lake,org,Orange Line,14,0
+Washington/Wells,org,Orange Line,12,0
+Western-Orange,org,Orange Line,4,0
+18th,pink,Pink Line,10,0
+54th/Cermak,pink,Pink Line,1,0
+Adams/Wabash,pink,Pink Line,19,0
+Ashland-Lake,pink,Pink Line,12,0
+California-Cermak,pink,Pink Line,7,0
+Central Park,pink,Pink Line,5,0
+Cicero-Cermak,pink,Pink Line,2,0
+Clark/Lake (Elevated),pink,Pink Line,15,0
+Clinton-Green,pink,Pink Line,14,0
+Damen-Cermak,pink,Pink Line,9,0
+Harold Washington Library,pink,Pink Line,20,0
+Kedzie-Cermak,pink,Pink Line,6,0
+Kostner,pink,Pink Line,3,0
+LaSalle/Van Buren,pink,Pink Line,21,0
+Madison/Wabash,pink,Pink Line,18,0
+Morgan,pink,Pink Line,13,0
+Polk,pink,Pink Line,11,0
+Pulaski-Cermak,pink,Pink Line,4,0
+Quincy/Wells,pink,Pink Line,22,0
+Randolph/Wabash,pink,Pink Line,17,0
+State/Lake,pink,Pink Line,16,0
+Washington/Wells,pink,Pink Line,23,0
+Western-Cermak,pink,Pink Line,8,0
+Adams/Wabash,p,Purple Line,21,0
+Armitage,p,Purple Line,14,0
+Belmont,p,Purple Line,10,0
+Central-Purple,p,Purple Line,2,0
+Chicago-Brown,p,Purple Line,16,0
+Clark/Lake (Elevated),p,Purple Line,18,0
+Davis,p,Purple Line,5,0
+Dempster,p,Purple Line,6,0
+Diversey,p,Purple Line,12,0
+Foster,p,Purple Line,4,0
+Fullerton,p,Purple Line,13,0
+Harold Washington Library,p,Purple Line,22,0
+Howard,p,Purple Line,9,0
+LaSalle/Van Buren,p,Purple Line,23,0
+Linden,p,Purple Line,1,0
+Madison/Wabash,p,Purple Line,20,0
+Main,p,Purple Line,7,0
+Merchandise Mart,p,Purple Line,17,0
+Noyes,p,Purple Line,3,0
+Quincy/Wells,p,Purple Line,24,0
+Randolph/Wabash,p,Purple Line,20,0
+Sedgwick,p,Purple Line,15,0
+South Boulevard,p,Purple Line,8,0
+State/Lake,p,Purple Line,19,0
+Washington/Wells,p,Purple Line,25,0
+Wellington,p,Purple Line,11,0
+47th-Red,red,Red Line,27,0
+63rd,red,Red Line,29,0
+69th,red,Red Line,30,0
+79th,red,Red Line,31,0
+87th,red,Red Line,32,0
+95th,red,Red Line,33,0
+Addison-Red,red,Red Line,13,0
+Argyle,red,Red Line,9,0
+Belmont,red,Red Line,14,0
+Berwyn,red,Red Line,8,0
+Bryn Mawr,red,Red Line,7,0
+Cermak-Chinatown,red,Red Line,25,0
+Chicago-Red,red,Red Line,18,1
+Clark/Division,red,Red Line,17,1
+Fullerton,red,Red Line,15,0
+Garfield-Red,red,Red Line,28,0
+Grand-Red,red,Red Line,19,1
+Granville,red,Red Line,5,0
+Harrison,red,Red Line,23,1
+Howard,red,Red Line,1,0
+Jackson-Red,red,Red Line,22,1
+Jarvis,red,Red Line,2,0
+Lake,red,Red Line,20,1
+Lawrence,red,Red Line,10,0
+Loyola,red,Red Line,4,0
+Monroe-Red,red,Red Line,21,1
+Morse,red,Red Line,3,0
+North/Clybourn,red,Red Line,16,1
+Roosevelt (Subway),red,Red Line,24,1
+Sheridan,red,Red Line,12,0
+Sox-35th,red,Red Line,26,0
+Thorndale,red,Red Line,6,0
+Wilson,red,Red Line,11,0
+Dempster-Skokie,y,Yellow Line,1,0
+Howard,y,Yellow Line,3,0
+Oakton-Skokie,y,Yellow Line,2,0
+Ashland/63rd,g,Green Line,31,0

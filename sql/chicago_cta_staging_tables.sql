@@ -39,5 +39,6 @@ CREATE TABLE IF NOT EXISTS chicago_cta_train_stops_ordering (
     stop_name           char(100),
     route_id            char(50),
     route_name          char(250),
-    stop_order          integer
+    stop_order          integer,
+    is_underground      integer
 );
