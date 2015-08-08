@@ -12,8 +12,8 @@ Damen-O'Hare,blue,Blue Line,13,0
 Division,blue,Blue Line,14,1
 Forest Park,blue,Blue Line,33,0
 Grand-Blue,blue,Blue Line,16,1
-Harlem-Forest Park,blue,Blue Line,4,0
-Harlem-O'Hare,blue,Blue Line,32,0
+Harlem-Forest Park,blue,Blue Line,32,0
+Harlem-O'Hare,blue,Blue Line,4,0
 Illinois Medical District,blue,Blue Line,25,0
 Irving Park-Blue,blue,Blue Line,7,0
 Jackson-Blue,blue,Blue Line,20,1
